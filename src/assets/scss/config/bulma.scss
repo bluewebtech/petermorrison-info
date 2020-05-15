@@ -1,0 +1,66 @@
+/**
+ * Bulma Reference
+ * http://bulma.io/documentation/overview/variables/
+ */
+@import '~bulma/sass/utilities/initial-variables';
+
+/**
+ * Body Settings
+ */
+$body-background-color: #0060b8;
+
+/**
+ * Global Font
+ */
+$family-primary: 'Montserrat';
+
+/**
+ * Global Font Color
+ */
+$body-color: #ffffff;
+
+$fullhd: 700px;
+
+@import '~bulma/bulma.sass';
+
+img {
+  -webkit-border-radius: 50% !important;
+  -moz-border-radius: 50% !important;
+  border-radius: 50% !important;
+}
+
+p {
+  padding: 10px;
+  font-size: 25px;
+  font-weight: 200;
+}
+
+.navbar-menu {
+  margin-top: 50px;
+  justify-content: center;
+
+  a {
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: 200;
+    border-bottom: 1px solid #0060b8;
+
+    &:hover {
+      background: none;
+      color: #ffffff;
+    }
+
+    &.is-active {
+      border-bottom: 1px solid #fff;
+      background: none;
+      color: #ffffff;
+    }
+  }
+}
+
+.hero-body {
+  a {
+    color: #b1e3ff;
+    font-weight: 500;
+  }
+}
