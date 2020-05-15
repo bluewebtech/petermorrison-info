@@ -4,3 +4,10 @@
   -o-transition: border $value ease-in-out;
   transition: border $value ease-in-out;
 }
+
+@mixin color-transition($value: 0.2s) {
+  -webkit-transition: color $value ease-in-out;
+  -moz-transition: color $value ease-in-out;
+  -o-transition: color $value ease-in-out;
+  transition: color $value ease-in-out;
+}

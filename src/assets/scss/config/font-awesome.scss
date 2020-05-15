@@ -1,0 +1,7 @@
+.fab {
+  @include color-transition;
+
+  &:hover {
+    color: #03c2fc !important;
+  }
+}
