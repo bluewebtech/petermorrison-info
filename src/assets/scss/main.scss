@@ -6,11 +6,18 @@
 
 /**
  * Animate.css Reference
- * https://daneden.github.io/animate.css/
+ * https://animate.style/
  */
- @import '~animate.css/animate.compat.css';
+@import '~animate.css/animate.compat.css';
+
+/**
+ * Bulma Helpers Reference
+ * https://github.com/jmaczan/bulma-helpers
+ */
+@import '~bulma-helpers/css/bulma-helpers.min.css';
 
 /**
  * Foundation and Overrides
  */
 @import 'config/_all';
+@import 'mixins/_all';

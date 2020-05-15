@@ -37,6 +37,28 @@ export default class About extends Vue {
           <p>Some of the many hobbies I have are, Playing guitar, writing fun code, photography, playing VR and currently learning how to develop games in VR and Roblox.</p>
         </div>
       </div>
+      <div class="columns">
+        <div class="column has-text-centered">
+          <a
+            href="https://www.linkedin.com/in/peter-morrison-a3083414/"
+            target="_blank"
+          >
+            <span class="has-text-white fab fa-linkedin fa-2x has-margin-right-30"/>
+          </a>
+          <a
+            href="https://github.com/bluewebtech"
+            target="_blank"
+          >
+            <span class="has-text-white fab fa-github fa-2x has-margin-right-30"/>
+          </a>
+          <a
+            href="https://twitter.com/bluewebtech"
+            target="_blank"
+          >
+            <span class="has-text-white fab fa-twitter fa-2x has-margin-right-30"/>
+          </a>
+        </div>
+      </div>
     </template>
   </BaseLayout>
 </template>

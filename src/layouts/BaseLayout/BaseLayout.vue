@@ -45,9 +45,9 @@ export default class BaseLayout extends Vue {
               class="navbar-burger burger"
               data-target="navbarMenuHeroB"
             >
-              <span></span>
-              <span></span>
-              <span></span>
+              <span/>
+              <span/>
+              <span/>
             </span>
           </div>
           <div class="navbar-menu is-capitalized">
@@ -70,3 +70,11 @@ export default class BaseLayout extends Vue {
     </div>
   </section>
 </template>
+
+<style lang="scss">
+.navbar-burger.burger {
+  span {
+    color: $white;
+  }
+}
+</style>

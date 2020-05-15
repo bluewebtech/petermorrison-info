@@ -1,6 +1,9 @@
 import Vue from 'vue';
 import VueMeta from 'vue-meta';
 
+import '@fortawesome/fontawesome-free/css/all.css';
+import '@fortawesome/fontawesome-free/js/all.js';
+
 Vue.use(VueMeta);
 
 import App from './App.vue';
