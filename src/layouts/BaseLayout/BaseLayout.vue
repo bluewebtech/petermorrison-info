@@ -62,7 +62,7 @@ export default class BaseLayout extends Vue {
 </script>
 
 <template>
-  <section class="hero">
+  <section class="hero is-unselectable">
     <div class="hero-head">
       <nav class="navbar">
         <div class="container">

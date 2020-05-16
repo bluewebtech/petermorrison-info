@@ -50,9 +50,11 @@ p {
     font-size: 25px;
     font-weight: 200;
     border-bottom: 1px solid #0060b8;
+    @include border-transition;
 
     &:hover {
       background: none;
+      border-bottom: 1px solid #03c2fc;
       color: #ffffff;
     }
 

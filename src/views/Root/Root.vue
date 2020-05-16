@@ -3,6 +3,7 @@
  * Modules
  */
 import { Component, Vue } from 'vue-property-decorator';
+const randomColor = require('randomcolor');
 
 @Component({
   /**
@@ -24,6 +25,31 @@ export default class Root extends Vue {
    * @var {String}
    */
   name = 'Root';
+
+  interval: any = null;
+
+  /**
+   * When triggered randomly change the image border color.
+   *
+   * @return {Void}
+   */
+  enterImage(): void {
+    this.interval = setInterval(() => {
+      const color = randomColor();
+      const random = Math.floor(Math.random() * 100) + 1;
+      (this.$refs.picture as any).style.border = `${random}px solid ${color}`;
+    }, 200);
+  }
+
+  /**
+   * When triggered revert the border back to the original state.
+   *
+   * @return {Void}
+   */
+  leaveImage(): void {
+    (this.$refs.picture as any).style.border = '5px solid #ffffff';
+    clearInterval(this.interval);
+  }
 }
 </script>
 
@@ -38,9 +64,13 @@ export default class Root extends Vue {
         </div>
         <div class="column has-text-centered">
           <img
+            class="has-cursor-pointer animated pulse"
             width="400"
             height="400"
             src="/images/profile.jpg"
+            ref="picture"
+            @mouseenter="enterImage"
+            @mouseleave="leaveImage"
           >
         </div>
       </div>
