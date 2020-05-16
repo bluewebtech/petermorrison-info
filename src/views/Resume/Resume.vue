@@ -36,6 +36,24 @@ export default class Resume extends Vue {
           <p>I do the <a href="https://github.com/bluewebtech" target="_blank">GitHub</a> thing as well and will go through times when I just have to get an idea out of my head. Even if it never gets finished. I really only use GitHub for person brain dump type projects. You know. For fun!</p>
         </div>
       </div>
+
+      <div class="columns">
+        <div class="column">
+          <p class="is-size-4">Courses</p>
+          <p class="is-size-6">
+            <a href="https://www.udemy.com/course/oculus-quest-development-with-unity/">VR Development Fundamentals With Oculus Quest And Unity</a>
+          </p>
+          <p class="is-size-6">
+            <a href="https://www.udemy.com/course/unitycourse/">Complete C# Unity Developer 2D: Learn to Code Making Games</a>
+          </p>
+          <p class="is-size-6">
+            <a href="https://www.udemy.com/course/the-ultimate-guide-to-game-development-with-unity/">The Ultimate Guide to Game Development with Unity 2019</a>
+          </p>
+          <p class="is-size-6">
+            <a href="https://www.udemy.com/course/blendertutorial/">Complete Blender Creator: Learn 3D Modelling for Beginners</a>
+          </p>
+        </div>
+      </div>
     </template>
   </BaseLayout>
 </template>

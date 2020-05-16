@@ -20,4 +20,13 @@ module.exports = {
       }
     }
   },
+
+  /**
+   * Progressive Web Application (PWA) configuration.
+   */
+  pwa: {
+    name: 'Peter Morrison',
+    themeColor: '#0060b8',
+    msTileColor: '#0060b8',
+  },
 };

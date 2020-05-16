@@ -14,12 +14,38 @@ export default class BaseLayout extends Vue {
   name  = 'BaseLayout';
 
   /**
+   * The mobile menu display status.
+   *
+   * @var {Boolean}
+   */
+  show = false;
+
+  /**
+   * Get the mobile menu styles.
+   *
+   * @return {String}
+   */
+  get mobile(): string {
+    const base = 'navbar-menu is-capitalized';
+    return (this.show ? `${base} animated fadeIn is-active` : base);
+  }
+
+  /**
    * Get all available routes.
    *
    * @return {String[]}
    */
   get routes(): string[] {
     return (this.$router as any).options.routes;
+  }
+
+  /**
+   * Trigger the mobile menu show/hide event.
+   *
+   * @return {Void}
+   */
+  onShow(): void {
+    this.show = (!this.show);
   }
 
   /**
@@ -41,16 +67,17 @@ export default class BaseLayout extends Vue {
       <nav class="navbar">
         <div class="container">
           <div class="navbar-brand">
-            <span
+            <div
               class="navbar-burger burger"
               data-target="navbarMenuHeroB"
+              @click="onShow"
             >
               <span/>
               <span/>
               <span/>
-            </span>
+            </div>
           </div>
-          <div class="navbar-menu is-capitalized">
+          <div :class="mobile">
             <RouterLink
               v-for="({ path, name }, key) in routes"
               :key="key"
@@ -75,6 +102,24 @@ export default class BaseLayout extends Vue {
 .navbar-burger.burger {
   span {
     color: $white;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .hero-body {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  .navbar-burger {
+    width: 100% !important;
+  }
+
+  .navbar-menu {
+    &.is-active {
+      margin: 0 !important;
+      background: none;
+    }
   }
 }
 </style>

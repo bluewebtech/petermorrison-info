@@ -19,8 +19,14 @@ $family-primary: 'Montserrat';
  */
 $body-color: #ffffff;
 
+/**
+ * Global Full HD
+ */
 $fullhd: 700px;
 
+/**
+ * Base Bulma Styles
+ */
 @import '~bulma/bulma.sass';
 
 img {
