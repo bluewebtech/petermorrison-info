@@ -40,36 +40,16 @@ export default class Resume extends Vue {
       <div class="columns">
         <div class="column">
           <p class="is-size-4">Courses</p>
-          <p class="is-size-6">
+          <p
+            class="is-size-6"
+            v-for="({title, url}, key) in $store.state.courses.items"
+            :key="key"
+          >
             <a
-              href="https://www.udemy.com/course/oculus-quest-development-with-unity/"
+              :href="url"
               target="_blank"
             >
-              VR Development Fundamentals With Oculus Quest And Unity
-            </a>
-          </p>
-          <p class="is-size-6">
-            <a
-              href="https://www.udemy.com/course/unitycourse/"
-              target="_blank"
-            >
-              Complete C# Unity Developer 2D: Learn to Code Making Games
-            </a>
-          </p>
-          <p class="is-size-6">
-            <a
-              href="https://www.udemy.com/course/the-ultimate-guide-to-game-development-with-unity/"
-              target="_blank"
-            >
-              The Ultimate Guide to Game Development with Unity 2019
-            </a>
-          </p>
-          <p class="is-size-6">
-            <a
-              href="https://www.udemy.com/course/blendertutorial/"
-              target="_blank"
-            >
-              Complete Blender Creator: Learn 3D Modelling for Beginners
+              <span v-text="title"/>
             </a>
           </p>
         </div>

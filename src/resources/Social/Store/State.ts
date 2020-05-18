@@ -6,15 +6,19 @@ export default {
    */
   items: [
     {
-      icon: 'fa-linkedin',
+      icon: 'fab fa-linkedin',
       url: 'https://www.linkedin.com/in/peter-morrison-a3083414/',
     },
     {
-      icon: 'fa-github',
+      icon: 'fas fa-info',
+      url: 'https://my.indeed.com/p/peter_m-orrison',
+    },
+    {
+      icon: 'fab fa-github',
       url: 'https://github.com/bluewebtech',
     },
     {
-      icon: 'fa-twitter',
+      icon: 'fab fa-twitter',
       url: 'https://twitter.com/bluewebtech',
     },
   ],

@@ -38,7 +38,14 @@ export default class ProfileImage extends Vue {
   interval: any = null;
 
   /**
-   * When triggered randomly change the image border color.
+   * The interval milliseconds timer.
+   *
+   * @var {Int}
+   */
+  milliseconds = 200;
+
+  /**
+   * When triggered randomly change the image border size, style and color.
    *
    * @return {Void}
    */
@@ -49,7 +56,7 @@ export default class ProfileImage extends Vue {
       const style = this.randomBorderStyle();
       const border = (`${size} ${style} ${color}`);
       (this.$refs.picture as any).style.border = border;
-    }, 200);
+    }, this.milliseconds);
   }
 
   /**
@@ -59,7 +66,7 @@ export default class ProfileImage extends Vue {
    * @return {Void}
    */
   onLeaveImage(): void {
-    (this.$refs.picture as any).style.border = '5px solid #ffffff';
+    this.setDefaultBorder();
     clearInterval(this.interval);
   }
 
@@ -92,6 +99,15 @@ export default class ProfileImage extends Vue {
     const total = borders.length;
 
     return borders[Math.floor(Math.random() * total)];
+  }
+
+  /**
+   * Set the default border settings.
+   *
+   * @return {Void}
+   */
+  setDefaultBorder(): void {
+    (this.$refs.picture as any).style.border = '5px solid #ffffff';
   }
 }
 </script>

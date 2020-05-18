@@ -45,7 +45,7 @@ export default class About extends Vue {
             target="_blank"
             :key="key"
           >
-            <span :class="`has-text-white fab ${icon} fa-2x has-margin-right-30`"/>
+            <span :class="`has-text-white ${icon} fa-2x has-margin-right-30`"/>
           </a>
         </div>
       </div>

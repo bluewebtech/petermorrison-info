@@ -1,6 +1,6 @@
 export default {
   /**
-   * Get the social items.
+   * Get the course items.
    *
    * @return {String[]}
    */
