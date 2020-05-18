@@ -16,8 +16,10 @@ import '@/assets/scss/main.scss';
 /**
  * Internal Modules
  */
+import Components from '@/components';
 import Layouts from '@/layouts';
 
+Vue.use(Components);
 Vue.use(Layouts);
 
 Vue.config.productionTip = false;

@@ -3,7 +3,6 @@
  * Modules
  */
 import { Component, Vue } from 'vue-property-decorator';
-const randomColor = require('randomcolor');
 
 @Component({
   /**
@@ -25,31 +24,6 @@ export default class Root extends Vue {
    * @var {String}
    */
   name = 'Root';
-
-  interval: any = null;
-
-  /**
-   * When triggered randomly change the image border color.
-   *
-   * @return {Void}
-   */
-  enterImage(): void {
-    this.interval = setInterval(() => {
-      const color = randomColor();
-      const random = Math.floor(Math.random() * 100) + 1;
-      (this.$refs.picture as any).style.border = `${random}px solid ${color}`;
-    }, 200);
-  }
-
-  /**
-   * When triggered revert the border back to the original state.
-   *
-   * @return {Void}
-   */
-  leaveImage(): void {
-    (this.$refs.picture as any).style.border = '5px solid #ffffff';
-    clearInterval(this.interval);
-  }
 }
 </script>
 
@@ -63,15 +37,7 @@ export default class Root extends Vue {
           <h3 class="animated fadeIn delay-2s">Senior Software Engineer</h3>
         </div>
         <div class="column has-text-centered">
-          <img
-            class="has-cursor-pointer animated pulse"
-            width="400"
-            height="400"
-            src="/images/profile.jpg"
-            ref="picture"
-            @mouseenter="enterImage"
-            @mouseleave="leaveImage"
-          >
+          <ProfileImage/>
         </div>
       </div>
     </template>
@@ -102,13 +68,9 @@ h1, h2, h3 {
   font-weight: 200;
 }
 
-img {
-  padding: 5px;
-  border: 5px solid #ffffff;
-  @include border-transition;
-
-  &:hover {
-    border: 5px solid #75bbeb;
+@media only screen and (max-width: 500px) {
+  h1 {
+    margin-top: 0 !important;
   }
 }
 </style>
