@@ -40,22 +40,12 @@ export default class About extends Vue {
       <div class="columns">
         <div class="column has-text-centered">
           <a
-            href="https://www.linkedin.com/in/peter-morrison-a3083414/"
+            v-for="({icon, url}, key) in $store.state.social.items"
+            :href="url"
             target="_blank"
+            :key="key"
           >
-            <span class="has-text-white fab fa-linkedin fa-2x has-margin-right-30"/>
-          </a>
-          <a
-            href="https://github.com/bluewebtech"
-            target="_blank"
-          >
-            <span class="has-text-white fab fa-github fa-2x has-margin-right-30"/>
-          </a>
-          <a
-            href="https://twitter.com/bluewebtech"
-            target="_blank"
-          >
-            <span class="has-text-white fab fa-twitter fa-2x has-margin-right-30"/>
+            <span :class="`has-text-white fab ${icon} fa-2x has-margin-right-30`"/>
           </a>
         </div>
       </div>

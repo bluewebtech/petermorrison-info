@@ -3,9 +3,10 @@ import Vuex from 'vuex';
 
 Vue.use(Vuex);
 
+const { SocialStore } = require('@/resources/Social');
+
 export default new Vuex.Store({
-  state: {},
-  mutations: {},
-  actions: {},
-  modules: {},
+  modules: {
+    social: SocialStore,
+  }
 });
