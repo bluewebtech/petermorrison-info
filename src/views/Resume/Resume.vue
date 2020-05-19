@@ -24,6 +24,15 @@ export default class Resume extends Vue {
    * @var {String}
    */
   name = 'Resume';
+
+  /**
+   * Get all of the available courses currently within state.
+   *
+   * @var {String[]}
+   */
+  get courses(): string[] {
+    return this.$store.state.courses.items;
+  }
 }
 </script>
 
@@ -42,7 +51,7 @@ export default class Resume extends Vue {
           <p class="is-size-4">Courses</p>
           <p
             class="is-size-6"
-            v-for="({title, url}, key) in $store.state.courses.items"
+            v-for="({title, url}, key) in courses"
             :key="key"
           >
             <a
