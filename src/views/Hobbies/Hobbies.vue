@@ -8,13 +8,13 @@ import { Options, Vue } from 'vue-class-component';
   components: {},
 })
 
-export default class About extends Vue {
+export default class Hobbies extends Vue {
   /**
    * The component name.
    *
    * @var {String}
    */
-  public name = 'About';
+  public name = 'Hobbies';
 }
 </script>
 

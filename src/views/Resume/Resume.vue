@@ -2,19 +2,10 @@
 /**
  * Modules
  */
-import { Component, Vue } from 'vue-property-decorator';
+import { Options, Vue } from 'vue-class-component';
 
-@Component({
-  /**
-   * The page meta.
-   *
-   * @var {Object}
-   */
-  metaInfo() {
-    return {
-      title: 'Resume',
-    };
-  },
+@Options({
+  components: {},
 })
 
 export default class Resume extends Vue {
@@ -23,46 +14,10 @@ export default class Resume extends Vue {
    *
    * @var {String}
    */
-  name = 'Resume';
-
-  /**
-   * Get all of the available courses currently within state.
-   *
-   * @var {String[]}
-   */
-  get courses(): string[] {
-    return this.$store.state.courses.items;
-  }
+  public name = 'Resume';
 }
 </script>
 
 <template>
-  <BaseLayout>
-    <template slot="content">
-      <div class="columns">
-        <div class="column">
-          <p>Typically I try to keep my resume up to date as much as possible. The best place to take a look would be through my <a href="https://www.linkedin.com/in/peter-morrison-a3083414/" target="_blank">LinkedIn</a> profile. There you can poke around at my experience and whatever certifications or trainings I might be doing or have complete.</p>
-          <p>I do the <a href="https://github.com/bluewebtech" target="_blank">GitHub</a> thing as well and will go through times when I just have to get an idea out of my head. Even if it never gets finished. I really only use GitHub for personol brain dump type projects. You know. For fun!</p>
-        </div>
-      </div>
-
-      <div class="columns">
-        <div class="column">
-          <p class="is-size-4">Courses</p>
-          <p
-            class="is-size-6"
-            v-for="({title, url}, key) in courses"
-            :key="key"
-          >
-            <a
-              :href="url"
-              target="_blank"
-            >
-              <span v-text="title"/>
-            </a>
-          </p>
-        </div>
-      </div>
-    </template>
-  </BaseLayout>
+  <BaseLayout/>
 </template>
