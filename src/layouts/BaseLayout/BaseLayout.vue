@@ -57,4 +57,14 @@ export default class BaseLayout extends Vue {
     }
   }
 }
+
+@media only screen and (max-width: 1024px) {
+  .hero {
+    .hero-body {
+      .container {
+        margin: -100px auto 0 auto;
+      }
+    }
+  }
+}
 </style>
