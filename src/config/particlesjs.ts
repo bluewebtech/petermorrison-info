@@ -1,7 +1,7 @@
 export default {
   'particles': {
     'number': {
-      'value': 80,
+      'value': 60,
       'density': {
         'enable': true,
         'value_area': 800
@@ -30,8 +30,8 @@ export default {
       'random': false,
       'anim': {
         'enable': true,
-        'speed': 1.3586413586413588,
-        'opacity_min': 0.023976023976023976,
+        'speed': 1,
+        'opacity_min': 1,
         'sync': false
       }
     },
@@ -106,5 +106,5 @@ export default {
       }
     }
   },
-  'retina_detect': true
+  'retina_detect': false
 };

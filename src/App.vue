@@ -2,20 +2,21 @@
 /**
  * Modules
  */
-import { onMounted } from 'vue';
-import { Vue, setup } from 'vue-class-component';
+import { defineComponent, watch } from 'vue';
+import { useRoute } from 'vue-router';
 
-const stuff = () => {
-  onMounted(() => {
-    // console.log('stuff.onMounted');
-  });
+export default defineComponent({
+  setup() {
+    const name = 'App';
+    const route = useRoute();
 
-  return {};
-}
+    watch(() => route.name, (name) => {
+      (document as any).title = name;
+    });
 
-export default class Counter extends Vue {
-  stuff = setup(() => stuff());
-}
+    return {};
+  }
+});
 </script>
 
 <template>

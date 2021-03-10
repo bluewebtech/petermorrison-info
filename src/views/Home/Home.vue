@@ -34,7 +34,6 @@ export default class Home extends Vue {
           <h1>Hello,</h1>
           <h2>I’m Pete,</h2>
           <h3>Software Engineer.</h3>
-
           <div class="social">
             <a href="https://github.com/bluewebtech" target="_blank">
               <i class="fab fa-github fa-2x"/>

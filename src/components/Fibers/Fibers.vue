@@ -27,30 +27,6 @@ export default class Fibers extends Vue {
 </template>
 
 <style lang="scss" scoped>
-.fiber_1 {
-  animation: wind 5.5s infinite;
-}
-
-.fiber_2 {
-  animation: wind 6s infinite;
-}
-
-.fiber_3 {
-  animation: wind 5s infinite;
-}
-
-.fiber_4 {
-  animation: wind 6.5s infinite;
-}
-
-.fiber_5 {
-  animation: wind 8s infinite;
-}
-
-.fiber_6 {
-  animation: wind 9s infinite;
-}
-
 @keyframes wind {
   30% {
     transform: rotate(5deg);
@@ -85,6 +61,8 @@ export default class Fibers extends Vue {
     background-size: 100% 100%;
     stroke: black;
     stroke-width: 5px;
+    will-change: transform;
+    animation: wind 5.5s infinite;
   }
 
   .fiber_2 {
@@ -96,6 +74,8 @@ export default class Fibers extends Vue {
     background: url('/fibers/fiber_02.svg');
     background-repeat: no-repeat;
     background-size: 100% 100%;
+    will-change: transform;
+    animation: wind 6s infinite;
   }
 
   .fiber_3 {
@@ -107,6 +87,8 @@ export default class Fibers extends Vue {
     background: url('/fibers/fiber_03.svg');
     background-repeat: no-repeat;
     background-size: 100% 100%;
+    will-change: transform;
+    animation: wind 5s infinite;
   }
 
   .fiber_4 {
@@ -118,6 +100,8 @@ export default class Fibers extends Vue {
     background: url('/fibers/fiber_04.svg');
     background-repeat: no-repeat;
     background-size: 100% 100%;
+    will-change: transform;
+    animation: wind 6.5s infinite;
   }
 
   .fiber_5 {
@@ -129,6 +113,8 @@ export default class Fibers extends Vue {
     background: url('/fibers/fiber_05.svg');
     background-repeat: no-repeat;
     background-size: 40% 100%;
+    will-change: transform;
+    animation: wind 8s infinite;
   }
 
   .fiber_6 {
@@ -140,6 +126,8 @@ export default class Fibers extends Vue {
     background: url('/fibers/fiber_06.svg');
     background-repeat: no-repeat;
     background-size: 100% 100%;
+    will-change: transform;
+    animation: wind 9s infinite;
   }
 
   @media only screen and (max-width: 1280px) {

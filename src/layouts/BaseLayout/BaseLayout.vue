@@ -29,7 +29,7 @@ export default class BaseLayout extends Vue {
 
 <template>
   <Particles/>
-  <section class="hero is-fullheight is-unselectable">
+  <section class="hero is-unselectable">
     <Navigation/>
     <div class="hero-body">
       <div class="container">
@@ -39,7 +39,7 @@ export default class BaseLayout extends Vue {
   </section>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .particles {
   position: absolute;
   top: 0;
@@ -52,9 +52,41 @@ export default class BaseLayout extends Vue {
   background: none;
 
   .hero-body {
+    animation: fadeInAnimation ease 1s;
+
     .container {
-      margin: -100px 200px 0 200px;
+      padding: 20px 50px;
+
+      .columns {
+        margin: 0;
+
+        .column {
+          h2 {
+            padding-left: 6px;
+            height: 60px;
+            color: #0a72af;
+            font-size: 48px;
+            font-weight: bolder;
+            -webkit-text-stroke: 1px #ffffff;
+          }
+
+          p {
+            padding: 20px 10px;
+            font-size: 24px;
+            line-height: 40px;
+          }
+        }
+      }
     }
+  }
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 

@@ -31,26 +31,3 @@ export default class Resume extends Vue {
     </template>
   </BaseLayout>
 </template>
-
-<style lang="scss" scoped>
-.columns {
-  margin-top: 65px;
-
-  .column {
-    h2 {
-      padding-left: 6px;
-      height: 60px;
-      color: #0a72af;
-      font-size: 48px;
-      font-weight: bolder;
-      -webkit-text-stroke: 1px #ffffff;
-    }
-
-    p {
-      padding: 20px 10px;
-      font-size: 24px;
-      line-height: 40px;
-    }
-  }
-}
-</style>
