@@ -2,24 +2,21 @@
  * Google Font Reference
  * https://fonts.google.com/specimen/Raleway
  */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Spartan:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-/**
- * Animate.css Reference
- * https://animate.style/
+ /**
+  * Bulma Helpers Reference
+  * https://github.com/jmaczan/bulma-helpers
+  */
+ @import '~bulma-helpers/css/bulma-helpers.min.css';
+
+ /**
+ * Font Awesome Reference
+ * https://fontawesome.com/
  */
-@import '~animate.css/animate.compat.css';
+ @import '~@fortawesome/fontawesome-free/css/all.css';
 
-/**
- * Bulma Helpers Reference
- * https://github.com/jmaczan/bulma-helpers
- */
-@import '~bulma-helpers/css/bulma-helpers.min.css';
-
-@import '~@fortawesome/fontawesome-free/css/all.css';
-
-/**
- * Foundation and Overrides
- */
-@import 'mixins/_all';
-@import 'config/_all';
+ /**
+  * Foundation and Overrides
+  */
+ @import 'config/_all';

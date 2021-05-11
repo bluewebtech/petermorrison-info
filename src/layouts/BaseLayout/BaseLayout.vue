@@ -2,96 +2,37 @@
 /**
  * Modules
  */
-import { Component, Vue } from 'vue-property-decorator';
+import { Options, Vue } from 'vue-class-component';
 
-@Component
+/**
+ * Components
+ */
+import Navigation from './@Components/Navigation';
+import Particles from './@Components/Particles';
+
+@Options({
+  components: {
+    Navigation,
+    Particles,
+  },
+})
+
 export default class BaseLayout extends Vue {
   /**
    * The component name.
    *
    * @var {String}
    */
-  name  = 'BaseLayout';
-
-  /**
-   * The mobile menu display status.
-   *
-   * @var {Boolean}
-   */
-  show = false;
-
-  /**
-   * Get the mobile menu styles.
-   *
-   * @return {String}
-   */
-  get mobile(): string {
-    const base = 'navbar-menu is-capitalized';
-    return (this.show ? `${base} animated fadeIn is-active` : base);
-  }
-
-  /**
-   * Get all available routes.
-   *
-   * @return {String[]}
-   */
-  get routes(): string[] {
-    return (this.$router as any).options.routes;
-  }
-
-  /**
-   * Trigger the mobile menu show/hide event.
-   *
-   * @return {Void}
-   */
-  onShow(): void {
-    this.show = (!this.show);
-  }
-
-  /**
-   * Get the route styles and add the is-active class
-   * if the route is indeed the current.
-   *
-   * @param {String} route
-   * @return {String}
-   */
-  styles(route: string): string {
-    return (`navbar-item ${this.$route.name === route ? 'is-active' : ''}`);
-  }
+  public name = 'BaseLayout';
 }
 </script>
 
 <template>
+  <Particles/>
   <section class="hero is-unselectable">
-    <div class="hero-head">
-      <nav class="navbar">
-        <div class="container">
-          <div class="navbar-brand">
-            <div
-              class="navbar-burger burger"
-              data-target="navbarMenuHeroB"
-              @click="onShow"
-            >
-              <span/>
-              <span/>
-              <span/>
-            </div>
-          </div>
-          <div :class="mobile">
-            <RouterLink
-              v-for="({ path, name }, key) in routes"
-              :key="key"
-              :class="styles(name)"
-              v-text="name"
-              :to="path"
-            />
-          </div>
-        </div>
-      </nav>
-    </div>
-
+    <Navigation/>
     <div class="hero-body">
-      <div class="container animated fadeIn">
+      <div class="container is-fullheight">
         <slot name="content"/>
       </div>
     </div>
@@ -99,26 +40,62 @@ export default class BaseLayout extends Vue {
 </template>
 
 <style lang="scss">
-.navbar-burger.burger {
-  span {
-    color: $white;
+.particles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+}
+
+.hero {
+  background: none;
+
+  .hero-body {
+    animation: fadeInAnimation ease 1s;
+
+    .container {
+      padding: 20px 50px;
+
+      .columns {
+        margin: 0;
+
+        .column {
+          h2 {
+            padding-left: 6px;
+            height: 60px;
+            color: #0a72af;
+            font-size: 48px;
+            font-weight: bolder;
+            -webkit-text-stroke: 1px #ffffff;
+          }
+
+          p {
+            padding: 20px 10px;
+            font-size: 24px;
+            line-height: 40px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
 @media only screen and (max-width: 1024px) {
-  .hero-body {
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
-  }
-
-  .navbar-burger {
-    width: 100% !important;
-  }
-
-  .navbar-menu {
-    &.is-active {
-      margin: 0 !important;
-      background: none;
+  .hero {
+    .hero-body {
+      .container {
+        margin: -100px auto 0 auto;
+      }
     }
   }
 }
