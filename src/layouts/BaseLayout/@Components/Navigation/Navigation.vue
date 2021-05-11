@@ -66,6 +66,7 @@ export default class Navigation extends Vue {
           />
         </div>
 
+        <!--
         <div class="navbar-end">
           <div class="navbar-item">
             <div class="theme white"/>
@@ -77,6 +78,7 @@ export default class Navigation extends Vue {
             <div class="theme black"/>
           </div>
         </div>
+        -->
       </div>
     </nav>
   </div>

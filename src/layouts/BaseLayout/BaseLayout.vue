@@ -32,7 +32,7 @@ export default class BaseLayout extends Vue {
   <section class="hero is-unselectable">
     <Navigation/>
     <div class="hero-body">
-      <div class="container">
+      <div class="container is-fullheight">
         <slot name="content"/>
       </div>
     </div>
@@ -41,7 +41,7 @@ export default class BaseLayout extends Vue {
 
 <style lang="scss">
 .particles {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   height: 100vh;

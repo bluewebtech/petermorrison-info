@@ -32,8 +32,8 @@ export default class Home extends Vue {
       <div class="columns">
         <div class="column">
           <h1>Hello,</h1>
-          <h2>I’m Pete,</h2>
-          <h3>Software Engineer.</h3>
+          <h2 class="animated fadeIn delay-1s">I’m Pete,</h2>
+          <h3 class="animated fadeIn delay-2">Software Engineer.</h3>
           <div class="social">
             <a href="https://github.com/bluewebtech" target="_blank">
               <i class="fab fa-github fa-2x"/>
