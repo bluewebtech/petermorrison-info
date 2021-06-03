@@ -1,0 +1,63 @@
+@import 'assets/scss/config/mixins/_all';
+
+.hero-head {
+  .navbar {
+    .navbar-menu {
+      margin-left: 10px !important;
+      justify-content: left;
+
+      .navbar-start {
+        .navbar-item {
+          margin-top: 10px;
+        }
+
+        a {
+          color: #6D6D6D;
+          font-size: 12px;
+          font-weight: 600 !important;
+          text-transform: uppercase;
+          @include color-transition;
+
+          &:hover {
+            background: none;
+            color: #000000;
+          }
+
+          &.is-active {
+            background: none;
+            color: #3090C7;
+          }
+        }
+      }
+      .navbar-end {
+        margin-right: 20px;
+
+        .navbar-item {
+          padding: 0 15px 0 0;
+
+          .theme {
+            height: 15px;
+            width: 15px;
+            cursor: pointer;
+            border-radius: 50%;
+
+            &.white {
+              background: #ffffff;
+              border: 1px solid #6D6D6D;
+            }
+
+            &.blue {
+              background: #3090C7;
+              border: 1px solid #3090C7;
+            }
+
+            &.black {
+              background: #000000;
+              border: 1px solid #000000;
+            }
+          }
+        }
+      }
+    }
+  }
+}

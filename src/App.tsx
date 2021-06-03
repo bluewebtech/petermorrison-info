@@ -1,9 +1,15 @@
-function App() {
+import { BrowserRouter as Router } from 'react-router-dom';
+import BaseLayout from './layouts/BaseLayout';
+import Home from './views/Home';
+
+const App = () => {
   return (
-    <div>
-      <h1>Hello World</h1>
-    </div>
+    <Router>
+      <BaseLayout>
+        <Home/>
+      </BaseLayout>
+    </Router>
   );
-}
+};
 
 export default App;
