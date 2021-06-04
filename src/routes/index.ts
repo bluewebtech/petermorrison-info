@@ -1,9 +1,9 @@
 import { lazy } from 'react';
 
-const Home = lazy(() => import('views/Home'));
-const About = lazy(() => import('views/About'));
-const Resume = lazy(() => import('views/Resume'));
-const Hobbies = lazy(() => import('views/Hobbies'));
+const Home = lazy(() => import(/* webpackChunkName: "home" */ 'views/Home'));
+const About = lazy(() => import(/* webpackChunkName: "about" */ 'views/About'));
+const Resume = lazy(() => import(/* webpackChunkName: "resume" */ 'views/Resume'));
+const Hobbies = lazy(() => import(/* webpackChunkName: "hobbies" */ 'views/Hobbies'));
 
 const Routes = [
   {

@@ -8,7 +8,7 @@ const Particles = () => {
    *
    * @return {Void}
    */
-   useEffect(() => {
+  useEffect(() => {
     const windowObject = (window as any);
     windowObject.pJSDom = [];
     windowObject.particlesJS('particles', ParticlesJSConfig);

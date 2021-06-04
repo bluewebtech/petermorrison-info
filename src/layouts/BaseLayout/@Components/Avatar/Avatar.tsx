@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import './Avatar.scss';
 
@@ -40,6 +40,15 @@ const Avatar = () => {
     }
   }
 
+  /**
+   * Get the transform styles when they change.
+   *
+   * @return {Object}
+   */
+  const transform = useMemo(() => {
+    return {transform:`rotate(${rotate}deg)`};
+  }, [rotate]);
+
   return (
     <NavLink
       to="/"
@@ -49,7 +58,7 @@ const Avatar = () => {
         <div className="avatar"/>
         <div
           className="follower"
-          style={{transform:`rotate(${rotate}deg)`}}
+          style={transform}
           id="follower"
         >
           <div className="circle"/>
