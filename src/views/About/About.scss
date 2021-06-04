@@ -1,0 +1,38 @@
+.columns {
+  .column {
+    h1 {
+      height: 120px;
+      color: #6D6D6D;
+      font-size: 96px;
+      font-weight: 600;
+      -webkit-text-stroke: 1px #ffffff;
+    }
+
+    h2 {
+      padding-left: 6px;
+      height: 60px;
+      color: #0a72af;
+      font-size: 48px;
+      font-weight: bolder;
+      -webkit-text-stroke: 1px #ffffff;
+    }
+
+    h3 {
+      padding: 5px 10px;
+      height: 40px;
+      color: #000000;
+      font-size: 24px;
+      font-weight: bolder;
+      -webkit-text-stroke: 1px #ffffff;
+    }
+
+    .social {
+      .fab {
+        padding: 10px 15px;
+        color: #6D6D6D;
+        cursor: pointer;
+        -webkit-text-stroke: 1px #ffffff;
+      }
+    }
+  }
+}

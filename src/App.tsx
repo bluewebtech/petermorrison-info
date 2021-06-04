@@ -1,14 +1,18 @@
-import { BrowserRouter as Router } from 'react-router-dom';
-import BaseLayout from './layouts/BaseLayout';
-import Home from './views/Home';
+import { Suspense } from 'react';
+import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
+import Routes from './routes';
 
 const App = () => {
   return (
-    <Router>
-      <BaseLayout>
-        <Home/>
-      </BaseLayout>
-    </Router>
+    <Suspense fallback={<div></div>}>
+      <Router>
+        <Switch>
+          {Routes.map(({path, component}, key) => (
+            <Route exact path={path} component={component} key={key}/>
+          ))}
+        </Switch>
+      </Router>
+    </Suspense>
   );
 };
 

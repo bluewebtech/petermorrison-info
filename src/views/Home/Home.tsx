@@ -1,9 +1,10 @@
+import BaseLayout from 'layouts/BaseLayout';
 import Fibers from 'components/Fibers';
 import './Home.scss';
 
 const Home = () => {
   return (
-    <div>
+    <BaseLayout>
       <Fibers/>
       <div className="columns">
         <div className="column">
@@ -35,7 +36,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-    </div>
+    </BaseLayout>
   );
 };
 
