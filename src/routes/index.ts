@@ -1,26 +1,25 @@
 import { lazy } from 'react';
 
-const Home = lazy(() => import(/* webpackChunkName: "home" */ 'views/Home'));
-const About = lazy(() => import(/* webpackChunkName: "about" */ 'views/About'));
-const Resume = lazy(() => import(/* webpackChunkName: "resume" */ 'views/Resume'));
-const Hobbies = lazy(() => import(/* webpackChunkName: "hobbies" */ 'views/Hobbies'));
-
 const Routes = [
   {
     path: '/',
-    component: Home,
+    name: 'Home',
+    component: lazy(() => import(/* webpackChunkName: "home" */ 'views/Home')),
   },
   {
     path: '/about',
-    component: About,
+    name: 'About',
+    component: lazy(() => import(/* webpackChunkName: "about" */ 'views/About')),
   },
   {
     path: '/resume',
-    component: Resume,
+    name: 'Resume',
+    component: lazy(() => import(/* webpackChunkName: "resume" */ 'views/Resume')),
   },
   {
     path: '/hobbies',
-    component: Hobbies,
+    name: 'Hobbies',
+    component: lazy(() => import(/* webpackChunkName: "hobbies" */ 'views/Hobbies')),
   },
 ];
 
