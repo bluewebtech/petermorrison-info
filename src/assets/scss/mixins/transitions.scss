@@ -1,3 +1,9 @@
+@mixin background-transition($value: 200ms) {
+  -webkit-transition: background $value linear;
+  -ms-transition: background $value linear;
+  transition: background $value linear;
+}
+
 @mixin border-transition($value: 0.2s) {
   -webkit-transition: border $value ease-in-out;
   -moz-transition: border $value ease-in-out;

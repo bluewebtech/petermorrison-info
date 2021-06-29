@@ -1,0 +1,11 @@
+.light {
+  /**
+   * Body Settings
+   */
+  background: #fff;
+  @include background-transition;
+
+  p {
+    color: #000;
+  }
+}

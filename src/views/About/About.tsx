@@ -1,5 +1,4 @@
 import BaseLayout from 'layouts/BaseLayout';
-import './About.scss';
 
 const About = () => {
   return (

@@ -1,3 +1,4 @@
+import { useMemo } from 'react';
 import { useLocation, NavLink } from 'react-router-dom';
 import Routes from 'routes';
 import Avatar from 'layouts/BaseLayout/@Components/Avatar';
@@ -10,6 +11,10 @@ const Navigation = () => {
    * @var {Object}
    */
   const location = useLocation();
+
+  const doTheme = (arg: string): void => {
+    document.body.className = arg;
+  };
 
   /**
    * Add the active class to the navigation item that matches
@@ -43,6 +48,42 @@ const Navigation = () => {
     }
   );
 
+   const light = useMemo(() => {
+    return {
+      width: '20px',
+      height: '20px',
+      marginTop: '15px',
+      marginLeft: '15px',
+      padding: '5px',
+      backgroundColor: '#fff',
+      cursor: 'pointer',
+      borderStyle: 'solid',
+      borderWidth: '2px',
+      borderColor: '#ccc',
+      WebkitBorderRadius: 50,
+      MozBorderRadius: 50,
+      borderRadius: 50,
+    };
+  }, []);
+
+  const dark = useMemo(() => {
+    return {
+      width: '20px',
+      height: '20px',
+      marginTop: '15px',
+      marginLeft: '15px',
+      padding: '5px',
+      backgroundColor: '#000',
+      cursor: 'pointer',
+      borderStyle: 'solid',
+      borderWidth: '2px',
+      borderColor: '#ccc',
+      WebkitBorderRadius: 50,
+      MozBorderRadius: 50,
+      borderRadius: 50,
+    };
+  }, []);
+
   return (
     <div className="hero-head">
     <nav className="navbar">
@@ -52,6 +93,19 @@ const Navigation = () => {
       <div className="navbar-menu is-capitalized">
         <div className="navbar-start">
           {navigation}
+        </div>
+
+        <div className="navbar-end">
+          <div
+            className="navbar-item"
+            style={light}
+            onClick={doTheme.bind(this, 'light')}
+          />
+          <div
+            className="navbar-item"
+            style={dark}
+            onClick={doTheme.bind(this, 'dark')}
+          />
         </div>
       </div>
     </nav>

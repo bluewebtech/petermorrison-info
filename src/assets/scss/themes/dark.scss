@@ -1,0 +1,15 @@
+.dark {
+  /**
+   * Body Settings
+   */
+  background: #000;
+  @include background-transition;
+
+  p {
+    color: #ccc;
+
+    strong {
+      color: #0a72af;
+    }
+  }
+}

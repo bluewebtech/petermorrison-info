@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import ParticlesJSConfig from 'config/particlesjs';
-require('particles.js');
+import { tsParticles } from 'tsparticles';
 
 const Particles = () => {
   /**
@@ -9,9 +9,8 @@ const Particles = () => {
    * @return {Void}
    */
   useEffect(() => {
-    const windowObject = (window as any);
-    windowObject.pJSDom = [];
-    windowObject.particlesJS('particles', ParticlesJSConfig);
+   // @ts-ignore
+    tsParticles.load('particles', ParticlesJSConfig);
     return () => {};
   }, []);
 

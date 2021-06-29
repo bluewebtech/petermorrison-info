@@ -1,5 +1,4 @@
 import BaseLayout from 'layouts/BaseLayout';
-import './Hobbies.scss';
 
 const Hobbies = () => {
   return (
