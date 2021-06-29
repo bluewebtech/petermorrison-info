@@ -1,5 +1,4 @@
 import BaseLayout from 'layouts/BaseLayout';
-import './Resume.scss';
 
 const Resume = () => {
   return (

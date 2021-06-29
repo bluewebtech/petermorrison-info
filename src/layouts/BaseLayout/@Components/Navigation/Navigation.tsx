@@ -24,7 +24,18 @@ const Navigation = () => {
    * @return {String}
    */
   const isActive = (path: string) => {
-    return (location.pathname === path ? 'is-active' : '');
+    const locationPath = location.pathname;
+    const active = (locationPath === path);
+
+    if (active) {
+      const route = Routes.find(item => item.path === locationPath);
+      document.title = (route as any).name;
+      return 'is-active';
+    }
+
+    if (locationPath === '/') document.title = `Hello!, I'm Pete.`;
+
+    return '';
   };
 
   /**
@@ -86,30 +97,30 @@ const Navigation = () => {
 
   return (
     <div className="hero-head">
-    <nav className="navbar">
-      <div className="navbar-brand">
-        <Avatar/>
-      </div>
-      <div className="navbar-menu is-capitalized">
-        <div className="navbar-start">
-          {navigation}
+      <nav className="navbar">
+        <div className="navbar-brand">
+          <Avatar/>
         </div>
+        <div className="navbar-menu is-capitalized">
+          <div className="navbar-start">
+            {navigation}
+          </div>
 
-        <div className="navbar-end">
-          <div
-            className="navbar-item"
-            style={light}
-            onClick={doTheme.bind(this, 'light')}
-          />
-          <div
-            className="navbar-item"
-            style={dark}
-            onClick={doTheme.bind(this, 'dark')}
-          />
+          <div className="navbar-end">
+            <div
+              className="navbar-item"
+              style={light}
+              onClick={doTheme.bind(this, 'light')}
+            />
+            <div
+              className="navbar-item"
+              style={dark}
+              onClick={doTheme.bind(this, 'dark')}
+            />
+          </div>
         </div>
-      </div>
-    </nav>
-  </div>
+      </nav>
+    </div>
   );
 };
 

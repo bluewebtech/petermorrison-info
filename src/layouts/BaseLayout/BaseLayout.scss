@@ -17,6 +17,7 @@
 
       .columns {
         margin: 0;
+        position: relative;
 
         .column {
           h1 {
@@ -70,6 +71,51 @@
     .hero-body {
       .container {
         margin: -100px auto 0 auto;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .hero {
+    .hero-body {
+      padding: 10px;
+
+      .container {
+        margin: 0 auto;
+        padding: 0;
+
+        .columns {
+          margin: 0;
+          position: relative;
+
+          .column {
+            h1 {
+              height: 50px;
+              font-size: 50px;
+            }
+
+            h2 {
+              padding: 0;
+              height: 30px;
+              color: #0a72af;
+              font-size: 30px;
+            }
+
+            h3 {
+              padding: 0;
+              height: 40px;
+              color: #000000;
+              font-size: 20px;
+            }
+
+            p {
+              padding: 20px 2px 0 2px;
+              font-size: 15px;
+              line-height: 40px;
+            }
+          }
+        }
       }
     }
   }

@@ -12,4 +12,20 @@
       color: #0a72af;
     }
   }
+
+  .hero-head {
+    .navbar {
+      .navbar-menu {
+        .navbar-start {
+          a {
+            color: #FFFFFF;
+
+            &:hover {
+              color: #8D8D8D;
+            }
+          }
+        }
+      }
+    }
+  }
 }

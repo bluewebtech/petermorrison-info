@@ -8,4 +8,20 @@
   p {
     color: #000;
   }
+
+  .hero-head {
+    .navbar {
+      .navbar-menu {
+        .navbar-start {
+          a {
+            color: #6D6D6D;
+
+            &:hover {
+              color: #000000;
+            }
+          }
+        }
+      }
+    }
+  }
 }
