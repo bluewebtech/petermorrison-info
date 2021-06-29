@@ -16,6 +16,10 @@
   .hero-head {
     .navbar {
       .navbar-menu {
+        &.is-active {
+          background: #000000;
+        }
+
         .navbar-start {
           a {
             color: #FFFFFF;

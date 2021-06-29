@@ -95,17 +95,39 @@ const Navigation = () => {
     };
   }, []);
 
+  const doBurger = () => {
+    const burger = document.querySelectorAll('.navbar-burger');
+    const hasBurger = (burger.length > 0);
+    const menu = document.querySelectorAll('.navbar-menu');
+    const hasMenu = (menu.length > 0);
+
+    if (hasBurger) burger[0].classList.toggle('is-active');
+    if (hasMenu) menu[0].classList.toggle('is-active');
+  };
+
   return (
     <div className="hero-head">
       <nav className="navbar">
         <div className="navbar-brand">
           <Avatar/>
+          <div
+            role="button"
+            className="navbar-burger"
+            aria-label="menu"
+            aria-expanded="false"
+            data-target="navbarBasicExample"
+            onClick={doBurger.bind(this)}
+          >
+            <span aria-hidden="true"/>
+            <span aria-hidden="true"/>
+            <span aria-hidden="true"/>
+          </div>
         </div>
+
         <div className="navbar-menu is-capitalized">
           <div className="navbar-start">
             {navigation}
           </div>
-
           <div className="navbar-end">
             <div
               className="navbar-item"

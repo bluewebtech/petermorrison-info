@@ -10,3 +10,15 @@
     }
   }
 }
+
+@media only screen and (max-width: 500px) {
+  .columns {
+    .column {
+      .social {
+        .fab {
+          padding: 10px;
+        }
+      }
+    }
+  }
+}
