@@ -2,24 +2,21 @@
  * Bulma Reference
  * http://bulma.io/documentation/overview/variables/
  */
- @import '~bulma/sass/utilities/initial-variables';
+@import '~bulma/sass/utilities/initial-variables';
 
- /**
-  * Body Settings
-  */
- $body-background-color: #ffffff;
+/**
+ * Global Font
+ */
+$family-primary: 'Spartan';
 
- /**
-  * Global Font
-  */
- $family-primary: 'Spartan';
+body {
+  height: 100%;
+  min-height: 100vh;
+}
 
- /**
-  * Global Font Color
-  */
- $body-color: #000000;
+@import '../themes/_all';
 
- /**
-  * Base Bulma Styles
-  */
- @import '~bulma/bulma.sass';
+/**
+ * Base Bulma Styles
+ */
+@import '~bulma/bulma.sass';

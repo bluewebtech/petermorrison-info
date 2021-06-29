@@ -1,0 +1,35 @@
+.dark {
+  /**
+   * Body Settings
+   */
+  background: #000;
+  @include background-transition;
+
+  p {
+    color: #ccc;
+
+    strong {
+      color: #0a72af;
+    }
+  }
+
+  .hero-head {
+    .navbar {
+      .navbar-menu {
+        &.is-active {
+          background: #000000;
+        }
+
+        .navbar-start {
+          a {
+            color: #FFFFFF;
+
+            &:hover {
+              color: #8D8D8D;
+            }
+          }
+        }
+      }
+    }
+  }
+}

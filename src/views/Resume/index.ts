@@ -1,1 +1,1 @@
-export { default } from './Resume.vue';
+export { default } from './Resume';

@@ -1,1 +1,1 @@
-export { default } from './Fibers.vue';
+export { default } from './Fibers';

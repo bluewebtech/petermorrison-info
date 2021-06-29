@@ -1,1 +1,1 @@
-export { default } from './Particles.vue';
+export { default } from './Particles';

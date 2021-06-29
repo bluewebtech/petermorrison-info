@@ -1,4 +1,4 @@
-export default {
+const ParticlesConfig = {
   'particles': {
     'number': {
       'value': 40,
@@ -108,3 +108,5 @@ export default {
   },
   'retina_detect': false
 };
+
+export default ParticlesConfig;

@@ -1,0 +1,24 @@
+.columns {
+  .column {
+    .social {
+      .fab {
+        padding: 10px 15px;
+        color: #6D6D6D;
+        cursor: pointer;
+        -webkit-text-stroke: 1px #ffffff;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .columns {
+    .column {
+      .social {
+        .fab {
+          padding: 10px;
+        }
+      }
+    }
+  }
+}

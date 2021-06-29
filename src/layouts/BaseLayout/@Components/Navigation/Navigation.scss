@@ -1,0 +1,77 @@
+@import 'assets/scss/mixins/_all';
+
+.hero-head {
+  .navbar {
+    .navbar-burger {
+      z-index: 999;
+    }
+
+    .navbar-menu {
+      margin-left: 10px !important;
+      justify-content: left;
+      box-shadow: none;
+
+      &.is-active {
+        position: fixed;
+        margin: 0 !important;
+        padding-top: 100px;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+      }
+
+      .navbar-start {
+        .navbar-item {
+          margin-top: 10px;
+        }
+
+        a {
+          font-size: 12px;
+          font-weight: 600 !important;
+          text-transform: uppercase;
+          @include color-transition;
+
+          &:hover {
+            background: none;
+          }
+
+          &.is-active {
+            background: none;
+            color: #3090C7;
+          }
+        }
+      }
+
+      .navbar-end {
+        margin-right: 20px;
+
+        .navbar-item {
+          padding: 0 15px 0 0;
+
+          .theme {
+            height: 15px;
+            width: 15px;
+            cursor: pointer;
+            border-radius: 50%;
+
+            &.white {
+              background: #ffffff;
+              border: 1px solid #6D6D6D;
+            }
+
+            &.blue {
+              background: #3090C7;
+              border: 1px solid #3090C7;
+            }
+
+            &.black {
+              background: #000000;
+              border: 1px solid #000000;
+            }
+          }
+        }
+      }
+    }
+  }
+}

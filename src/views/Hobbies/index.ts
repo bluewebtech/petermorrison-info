@@ -1,1 +1,1 @@
-export { default } from './Hobbies.vue';
+export { default } from './Hobbies';

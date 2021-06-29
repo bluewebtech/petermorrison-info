@@ -1,0 +1,125 @@
+.particles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+}
+
+.hero {
+  background: none;
+
+  .hero-body {
+    animation: fadeInAnimation ease 1s;
+
+    .container {
+      padding: 20px 50px;
+
+      .columns {
+        margin: 0;
+        position: relative;
+
+        .column {
+          h1 {
+            height: 120px;
+            color: #6D6D6D;
+            font-size: 96px;
+            font-weight: 600;
+            -webkit-text-stroke: 1px #ffffff;
+          }
+
+          h2 {
+            padding-left: 6px;
+            height: 60px;
+            color: #0a72af;
+            font-size: 48px;
+            font-weight: bolder;
+            -webkit-text-stroke: 1px #ffffff;
+          }
+
+          h3 {
+            padding: 5px 10px;
+            height: 40px;
+            color: #000000;
+            font-size: 24px;
+            font-weight: bolder;
+            -webkit-text-stroke: 1px #ffffff;
+          }
+
+          p {
+            padding: 20px 10px;
+            font-size: 24px;
+            line-height: 40px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .hero {
+    .hero-body {
+      .container {
+        margin: -100px auto 0 auto;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .hero {
+    .hero-body {
+      padding: 10px;
+
+      .container {
+        margin: 0 auto;
+        padding: 0;
+
+        .columns {
+          margin: 0;
+          position: relative;
+
+          .column {
+            h1 {
+              padding: 0;
+              height: 65px;
+              font-size: 50px;
+            }
+
+            h2 {
+              margin-left: 3px;
+              padding: 0;
+              height: 45px;
+              color: #0a72af;
+              font-size: 30px;
+            }
+
+            h3 {
+              margin-left: 3px;
+              padding: 0;
+              height: 35px;
+              color: #000000;
+              font-size: 20px;
+            }
+
+            p {
+              padding: 20px 2px 0 2px;
+              font-size: 15px;
+              line-height: 40px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
