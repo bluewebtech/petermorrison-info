@@ -1,0 +1,38 @@
+.themes {
+  position: absolute;
+  right: 16px;
+  z-index: 9999999999;
+
+  .theme-item {
+    width: 20px;
+    height: 20px;
+    margin-top: 15px;
+    margin-left: 15px;
+    padding: 5px;
+    cursor: pointer;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #CCCCCC;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+
+    &.light {
+      background-color: #FFFFFF;
+    }
+
+    &.blue {
+      background-color: #0A72AF;
+    }
+
+    &.dark {
+      background-color: #000000;
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .themes {
+    top: 50px;
+  }
+}

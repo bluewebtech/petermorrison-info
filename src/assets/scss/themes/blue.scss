@@ -1,0 +1,40 @@
+.blue {
+  /**
+   * Body Settings
+   */
+  background: #0A72AF;
+  @include background-transition;
+
+  p {
+    color: #ccc;
+
+    strong {
+      color: #000000;
+    }
+  }
+
+  .hero-head {
+    .navbar {
+      .navbar-menu {
+        &.is-active {
+          background: #0A72AF;
+        }
+
+        .navbar-start {
+          a {
+            color: #FFFFFF;
+
+            &:hover {
+              color: #8D8D8D;
+            }
+
+            &.is-active {
+              background: none;
+              color: #000000;
+            }
+          }
+        }
+      }
+    }
+  }
+}
