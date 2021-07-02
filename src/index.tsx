@@ -1,8 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { LocalStorage } from 'utilities';
+import SettingsConfig from 'config/settings';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './assets/scss/main.scss';
+
+if (!LocalStorage.has('settings')) {
+  LocalStorage.set('settings', SettingsConfig);
+}
 
 ReactDOM.render(
   <React.StrictMode>
