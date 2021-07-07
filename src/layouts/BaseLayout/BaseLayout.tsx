@@ -1,6 +1,7 @@
 import { FC } from 'react';
 import Navigation from './@Components/Navigation';
 import Particles from './@Components/Particles';
+// import Settings from './@Components/Settings';
 import Themes from './@Components/Themes';
 import './BaseLayout.scss';
 

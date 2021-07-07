@@ -31,7 +31,7 @@ export default class LocalStorage {
    * @param {String} name
    * @return {Boolean}
    */
-  static has(name: string): any {
+  static has(name: string): boolean {
     return (localStorage.getItem(name) !== null);
   }
 
