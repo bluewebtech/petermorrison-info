@@ -45,6 +45,7 @@ const Themes = () => {
 
   return (
     <div className="themes">
+      <h2>Theme</h2>
       <div
         className="theme-item light"
         onClick={onTheme.bind(this, 'light')}

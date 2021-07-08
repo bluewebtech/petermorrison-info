@@ -1,8 +1,7 @@
 import { FC } from 'react';
 import Navigation from './@Components/Navigation';
 import Particles from './@Components/Particles';
-// import Settings from './@Components/Settings';
-import Themes from './@Components/Themes';
+import Settings from './@Components/Settings';
 import './BaseLayout.scss';
 
 interface Props {}
@@ -13,7 +12,7 @@ const BaseLayout: FC<Props> = ({ children }) => {
       <Particles/>
       <section className="hero is-unselectable">
         <Navigation/>
-        <Themes/>
+        <Settings/>
         <div className="hero-body">
           <div className="container is-fullheight">
             {children}

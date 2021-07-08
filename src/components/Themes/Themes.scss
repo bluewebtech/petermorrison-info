@@ -1,7 +1,5 @@
 .themes {
-  position: absolute;
-  right: 16px;
-  z-index: 9999999999;
+  position: relative;
 
   .theme-item {
     width: 20px;
@@ -16,6 +14,7 @@
     -webkit-border-radius: 50px;
     -moz-border-radius: 50px;
     border-radius: 50px;
+    float: left;
 
     &.light {
       background-color: #FFFFFF;

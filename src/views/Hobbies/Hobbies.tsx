@@ -5,7 +5,7 @@ const Hobbies = () => {
     <BaseLayout>
       <div className="columns">
         <div className="column">
-          <h2><span className="has-text-black">H</span>obbies</h2>
+          <h2><span className="has-text-black">P</span>astime</h2>
           <p>So, when I'm not coding or thinking about tech there are many things that I enjoy doing in my free time. Everyone needs to disconnect.</p>
           <p><strong>Playing Games.</strong> Of course videos games but not always. Losing yourself in a board game with my family is by far the best of the best.</p>
           <p><strong>House work.</strong> That's right I actually enjoy knocking out honey do lists with some home improvements.</p>
