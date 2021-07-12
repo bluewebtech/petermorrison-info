@@ -1,5 +1,5 @@
-import BaseLayout from 'layouts/BaseLayout';
-import Fibers from 'components/Fibers';
+import { BaseLayout } from 'layouts';
+import { Fibers } from 'components';
 import SocialConfig from 'config/social';
 import './Home.scss';
 

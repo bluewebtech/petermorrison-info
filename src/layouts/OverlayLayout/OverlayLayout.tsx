@@ -11,19 +11,19 @@ const OverlayLayout: FC<Props> = ({ children, onClose, show }) => {
   return (
     <div>
       {show ?
-      <div className="overlay">
-        <div
-          className="fas fa-times"
-          onClick={onClose}
-        />
-        <section className="hero is-unselectable">
-          <div className="hero-body">
-            <div className="container is-fullheight">
-              {children}
+        <div className="overlay">
+          <div
+            className="fas fa-times"
+            onClick={onClose}
+          />
+          <section className="hero is-unselectable">
+            <div className="hero-body">
+              <div className="container is-fullheight">
+                {children}
+              </div>
             </div>
-          </div>
-        </section>
-      </div>
+          </section>
+        </div>
       : null}
     </div>
   );

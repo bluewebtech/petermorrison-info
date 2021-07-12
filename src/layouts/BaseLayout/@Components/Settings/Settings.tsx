@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import OverlayLayout from 'layouts/OverlayLayout';
-import Themes from 'components/Themes';
+import { OverlayLayout } from 'layouts';
+import { Themes } from './@Components';
 import './Settings.scss';
 
 const Settings = () => {

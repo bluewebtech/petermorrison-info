@@ -1,7 +1,5 @@
 import { FC } from 'react';
-import Navigation from './@Components/Navigation';
-import Particles from './@Components/Particles';
-import Settings from './@Components/Settings';
+import { Navigation, Particles, Settings } from './@Components';
 import './BaseLayout.scss';
 
 interface Props {}
