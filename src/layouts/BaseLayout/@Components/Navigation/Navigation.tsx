@@ -6,17 +6,12 @@ import './Navigation.scss';
 const Navigation = () => {
   /**
    * Get the current location object from the hook.
-   *
-   * @var {Object}
    */
   const location = useLocation();
 
   /**
    * Add the active class to the navigation item that matches
    * the current route.
-   *
-   * @param {String} path
-   * @return {String}
    */
   const isActive = (path: string) => {
     const locationPath = location.pathname;
@@ -36,8 +31,6 @@ const Navigation = () => {
   /**
    * Loop through all available routes but filter out the
    * base route item.
-   *
-   * @return {Object}
    */
   const navigation = Routes
     .filter(item => item.path !== '/')
@@ -54,7 +47,10 @@ const Navigation = () => {
     }
   );
 
-  const doBurger = () => {
+  /**
+   * Handle the burger event in order to toggle the mobile menu.
+   */
+  const onBurger = () => {
     const burger = document.querySelectorAll('.navbar-burger');
     const hasBurger = (burger.length > 0);
     const menu = document.querySelectorAll('.navbar-menu');
@@ -75,7 +71,7 @@ const Navigation = () => {
             aria-label="menu"
             aria-expanded="false"
             data-target="navbarBasicExample"
-            onClick={doBurger.bind(this)}
+            onClick={onBurger.bind(this)}
           >
             <span aria-hidden="true"/>
             <span aria-hidden="true"/>

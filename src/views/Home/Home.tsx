@@ -7,8 +7,6 @@ const Home = () => {
   /**
    * Loop through all available social but filter out the
    * base route item.
-   *
-   * @return {Object}
    */
   const social = SocialConfig
     .map((item, key) => {

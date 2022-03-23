@@ -2,24 +2,28 @@ import { FC } from 'react';
 import './OverlayLayout.scss';
 
 interface Props {
+  title: string,
+  show: boolean,
   children: any,
   onClose: any,
-  show: boolean,
 }
 
-const OverlayLayout: FC<Props> = ({ children, onClose, show }) => {
+const OverlayLayout: FC<Props> = ({ title, show, children, onClose  }) => {
   return (
     <div>
       {show ?
         <div className="overlay">
-          <div
-            className="fas fa-times"
-            onClick={onClose}
-          />
           <section className="hero is-unselectable">
             <div className="hero-body">
               <div className="container is-fullheight">
-                {children}
+                <div className="header">
+                  <div
+                    className="fas fa-times"
+                    onClick={onClose}
+                  />
+                  <h1>{title}</h1>
+                </div>
+                <div className="content">{children}</div>
               </div>
             </div>
           </section>

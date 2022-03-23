@@ -2,26 +2,26 @@
   position: relative;
 
   .theme-item {
-    width: 20px;
-    height: 20px;
-    margin-top: 15px;
-    margin-left: 15px;
+    width: 15px;
+    height: 15px;
+    margin-top: 0;
+    margin-left: 10px;
     padding: 5px;
     cursor: pointer;
     border-style: solid;
     border-width: 2px;
-    border-color: #CCCCCC;
+    border-color: #cccccc;
     -webkit-border-radius: 50px;
     -moz-border-radius: 50px;
     border-radius: 50px;
     float: left;
 
     &.light {
-      background-color: #FFFFFF;
+      background-color: #ffffff;
     }
 
     &.blue {
-      background-color: #0A72AF;
+      background-color: #0a72af;
     }
 
     &.dark {

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { OverlayLayout } from 'layouts';
 import { Themes } from './@Components';
+import { LocalStorage } from 'utilities';
 import './Settings.scss';
 
 const Settings = () => {
@@ -10,26 +11,32 @@ const Settings = () => {
   const [show, setShow] = useState(false);
 
   /**
+   * Set the default theme.
+   */
+  document.body.className = LocalStorage.get('settings').theme;
+
+  /**
+   * Toggle the classes for the icon.
+   */
+  const toggleIcon = (): string => `fas fa-cog ${show ? 'hide' : ''}`;
+
+  /**
    * Handle the settings event which will either display
    * or hide the settings overlay.
-   *
-   * @return {Void}
    */
-  const onSettings = (): void => {
-    setShow(!show);
-  };
+  const onSettings = (): void => setShow(!show);
 
   return (
     <div className="settings">
       <OverlayLayout
+        title="Settings"
         show={show}
         onClose={onSettings}
       >
-        <h1>Settings</h1>
         <Themes/>
       </OverlayLayout>
       <div
-        className="fas fa-cog"
+        className={toggleIcon()}
         onClick={onSettings.bind(this)}
       />
     </div>

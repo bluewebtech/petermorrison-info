@@ -11,8 +11,6 @@ const Avatar = () => {
   /**
    * Initialize the on mouse move event handler as well as the
    * removal of the event handler once focus is lost.
-   *
-   * @return {Void}
    */
   useEffect(() => {
     window.addEventListener('mousemove', onMouseMove);
@@ -22,9 +20,6 @@ const Avatar = () => {
   /**
    * Handle the on mouse move event and calculate the current rotation
    * of the avatar follower.
-   *
-   * @param {Object} event
-   * @return {Void}
    */
   const onMouseMove = (event: any): void => {
     const element = document.getElementById('follower');
@@ -42,8 +37,6 @@ const Avatar = () => {
 
   /**
    * Get the transform styles when they change.
-   *
-   * @return {Object}
    */
   const transform = useMemo(() => {
     return {transform:`rotate(${rotate}deg)`};

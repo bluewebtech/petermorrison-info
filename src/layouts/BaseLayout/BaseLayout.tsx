@@ -12,9 +12,7 @@ const BaseLayout: FC<Props> = ({ children }) => {
         <Navigation/>
         <Settings/>
         <div className="hero-body">
-          <div className="container is-fullheight">
-            {children}
-          </div>
+          <div className="container is-fullheight">{children}</div>
         </div>
       </section>
     </div>

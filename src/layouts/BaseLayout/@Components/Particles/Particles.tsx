@@ -5,8 +5,6 @@ import { tsParticles } from 'tsparticles';
 const Particles = () => {
   /**
    * Initialize the particles using the hook.
-   *
-   * @return {Void}
    */
   useEffect(() => {
    // @ts-ignore
