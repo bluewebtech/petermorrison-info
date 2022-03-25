@@ -2,7 +2,7 @@
   /**
    * Body Settings
    */
-  background: #0A72AF;
+  background: #0a72af;
   @include background-transition;
 
   p {
@@ -11,21 +11,27 @@
     strong {
       color: #000000;
     }
+
+    code {
+      background: #000000;
+      color: #0a72af;
+      box-shadow: 2px 2px 2px #333333;
+    }
   }
 
   .hero-head {
     .navbar {
       .navbar-menu {
         &.is-active {
-          background: #0A72AF;
+          background: #0a72af;
         }
 
         .navbar-start {
           a {
-            color: #FFFFFF;
+            color: #ffffff;
 
             &:hover {
-              color: #8D8D8D;
+              color: #8d8d8d;
             }
 
             &.is-active {

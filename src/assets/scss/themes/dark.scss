@@ -11,6 +11,12 @@
     strong {
       color: #0a72af;
     }
+
+    code {
+      background: #0a72af;
+      color: #000000;
+      box-shadow: 2px 2px 2px #8d8d8d;
+    }
   }
 
   .hero-head {
@@ -22,10 +28,10 @@
 
         .navbar-start {
           a {
-            color: #FFFFFF;
+            color: #ffffff;
 
             &:hover {
-              color: #8D8D8D;
+              color: #8d8d8d;
             }
           }
         }

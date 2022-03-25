@@ -7,18 +7,23 @@
 
   p {
     color: #000;
+
+    code {
+      color: #0a72af;
+      box-shadow: 2px 2px 2px #000000;
+    }
   }
 
   .hero-head {
     .navbar {
       .navbar-menu {
         &.is-active {
-          background: #FFFFFF;
+          background: #ffffff;
         }
 
         .navbar-start {
           a {
-            color: #6D6D6D;
+            color: #6d6d6d;
 
             &:hover {
               color: #000000;
