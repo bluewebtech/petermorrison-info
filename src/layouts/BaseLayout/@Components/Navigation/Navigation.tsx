@@ -1,6 +1,8 @@
+import { useEffect } from 'react';
 import { useLocation, NavLink } from 'react-router-dom';
 import Routes from 'routes';
 import Avatar from 'layouts/BaseLayout/@Components/Avatar';
+import { Size } from 'utilities';
 import './Navigation.scss';
 
 const Navigation = () => {
@@ -8,6 +10,14 @@ const Navigation = () => {
    * Get the current location object from the hook.
    */
   const location = useLocation();
+
+  /**
+   * Handle the window resize event for the mobile menu.
+   */
+  useEffect(() => {
+    window.addEventListener('resize', onMobileMenuHide);
+    return () => window.removeEventListener('resize', onMobileMenuHide);
+  }, []);
 
   /**
    * Add the active class to the navigation item that matches
@@ -29,23 +39,28 @@ const Navigation = () => {
   };
 
   /**
+   * Add the desktop styles to the necessary menu items.
+   */
+  const isHiddenDesktop = (desktop: boolean) => {
+    return desktop ? '' : 'is-hidden-desktop-only is-hidden-widescreen-only';
+  };
+
+  /**
    * Loop through all available routes but filter out the
    * base route item.
    */
   const navigation = Routes
-    .filter(item => item.path !== '/')
-    .map((item, key) => {
-      return (
-        <NavLink
-          className={`navbar-item ${isActive(item.path)}`}
-          key={key}
-          to={`${item.path}`}
-        >
-          {item.name}
-        </NavLink>
-      );
-    }
-  );
+  .map((item, key) => {
+    return (
+      <NavLink
+        className={`navbar-item ${isActive(item.path)} ${isHiddenDesktop(item.desktop)}`}
+        key={key}
+        to={`${item.path}`}
+      >
+        {item.name}
+      </NavLink>
+    );
+  });
 
   /**
    * Handle the burger event in order to toggle the mobile menu.
@@ -58,6 +73,18 @@ const Navigation = () => {
 
     if (hasBurger) burger[0].classList.toggle('is-active');
     if (hasMenu) menu[0].classList.toggle('is-active');
+  };
+
+  /**
+   * Handle the hiding of the mobile menu.
+   */
+  const onMobileMenuHide = () => {
+    if (Size.width() >= 1028) {
+      const burger = document.querySelectorAll('.navbar-burger');
+      const menu = document.querySelectorAll('.navbar-menu');
+      burger[0].classList.remove('is-active');
+      menu[0].classList.remove('is-active');
+    }
   };
 
   return (
