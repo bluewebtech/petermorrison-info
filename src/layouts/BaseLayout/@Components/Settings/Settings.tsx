@@ -1,10 +1,19 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import { OverlayLayout } from 'layouts';
 import { Themes } from './@Components';
 import { LocalStorage } from 'utilities';
 import './Settings.scss';
 
 const Settings = () => {
+  const history = useHistory();
+
+  useEffect(() => {
+    return history.listen((location) => {
+      if (location.hash === '#settings') onSettings();
+    })
+  });
+
   /**
    * Define the show property and state hook.
    */

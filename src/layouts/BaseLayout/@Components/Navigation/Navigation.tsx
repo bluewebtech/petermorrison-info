@@ -42,7 +42,7 @@ const Navigation = () => {
    * Add the desktop styles to the necessary menu items.
    */
   const isHiddenDesktop = (desktop: boolean) => {
-    return desktop ? '' : 'is-hidden-desktop-only is-hidden-widescreen-only';
+    return desktop ? '' : 'is-hidden-desktop is-hidden-widescreen is-hidden-fullhd';
   };
 
   /**
@@ -105,7 +105,6 @@ const Navigation = () => {
             <span aria-hidden="true"/>
           </div>
         </div>
-
         <div className="navbar-menu is-capitalized">
           <div className="navbar-start">
             {navigation}
