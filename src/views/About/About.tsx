@@ -4,11 +4,11 @@ const code = `const bio = {
   husband: true,
   dad: true,
   career: 'Software Engineer',
-  dev: 'html|css|js|ts',
+  dev: 'html|css|scss|js|ts',
   quotes: 'Single',
   spaces: 2,
   food: 'Tacos',
-  drink: 'Beer|Whiskey'
+  drink: 'Beer|Whiskey',
 };`;
 
 const About = () => {
